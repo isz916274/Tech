@@ -1,0 +1,180 @@
+/* --- Importar tipografía técnica --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-yellow: #FFD700;
+    --primary-glow: rgba(255, 215, 0, 0.4);
+    --bg-black: #0a0a0a;
+    --bg-dark: #161616;
+    --bg-light-dark: #1f1f1f; /* Nuevo: para reemplazar el blanco intenso */
+    --text-white: #ffffff;
+    --text-grey: #b3b3b3;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* --- Comportamiento General --- */
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal accidental */
+}
+
+/* --- Scrollbar Personalizado (Estilo Cyberpunk/Tech) --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-black);
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-yellow);
+}
+
+/* Aplicar la fuente técnica a títulos */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* --- Adaptación de fondos Bootstrap al Tema Oscuro --- */
+/* Convertimos el bg-light de Bootstrap en un gris oscuro para no cegar al usuario */
+.bg-light {
+    background-color: var(--bg-light-dark) !important;
+    color: var(--text-white) !important;
+}
+
+/* --- Navbar Mejorada --- */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.95) !important; /* Ligeramente transparente */
+    backdrop-filter: blur(10px); /* Efecto cristal */
+    border-bottom: 2px solid var(--primary-yellow) !important;
+    transition: var(--transition);
+}
+
+.nav-link {
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-yellow) !important;
+    text-shadow: 0 0 8px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+/* --- Botones con Efecto Glow --- */
+.btn-warning {
+    background-color: var(--primary-yellow);
+    border: 1px solid var(--primary-yellow);
+    color: black !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-warning:hover {
+    background-color: transparent;
+    color: var(--primary-yellow) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Botones Outline (Usados en Forward México) */
+.btn-outline-warning:hover {
+    box-shadow: 0 0 15px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+/* --- Tarjetas con más profundidad --- */
+.card {
+    background-color: var(--bg-dark);
+    border: 1px solid #333 !important;
+    color: var(--text-white);
+    transition: var(--transition);
+    overflow: hidden; /* Mantiene las imágenes dentro de los bordes redondeados */
+}
+
+.card:hover {
+    border-color: var(--primary-yellow) !important;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 15px var(--primary-glow);
+}
+
+/* Para que los enlaces dentro de las tarjetas no se rompan visualmente */
+.card a {
+    transition: var(--transition);
+}
+.card:hover a.text-warning {
+    text-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* --- Ajuste de Formularios --- */
+.form-control:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 0.2rem var(--primary-glow);
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+/* --- Footer --- */
+footer {
+    border-top: 2px solid #222;
+}
+
+footer a {
+    color: var(--text-grey) !important;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--primary-yellow) !important;
+    text-shadow: 0 0 5px var(--primary-glow);
+    padding-left: 5px; /* Pequeño salto a la derecha al pasar el mouse */
+}
+
+/* --- Header Hero --- */
+.header-hero {
+    /* IMPORTANTE: Cambia esta URL por un enlace directo (.jpg o .png) o una ruta local (ej. '../img/hero.jpg') */
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.5)), 
+                url('../img/fondo.webp'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efecto Parallax */
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 15px;
+    background: #111;
+}
+
+.marca-logo{
+    width:120px;
+    height:60px;
+    object-fit:contain;
+    margin:auto;
+    display:block;
+}
+.testimonio-img{
+    width: 300px;;
+    height:auto;
+    object-fit:cover;
+}
