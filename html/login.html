@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Tech House</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body {
+            background: #070707;
+            min-height: 100vh;
+        }
+        .login-hero {
+            min-height: calc(100vh - 72px);
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 0;
+            overflow: hidden;
+        }
+        .login-side {
+            position: relative;
+            background: url('../img/reparacion2.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+        }
+        .login-side::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.9));
+        }
+        .login-side-content {
+            position: relative;
+            z-index: 1;
+            max-width: 520px;
+            color: #fff;
+        }
+        .login-side h2 {
+            font-size: clamp(2.4rem, 4vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: 0.06em;
+        }
+        .login-side p {
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.9;
+            max-width: 500px;
+        }
+        .login-card {
+            margin: auto;
+            min-height: 100%;
+            background: rgba(13, 13, 13, 0.98);
+            border: 1px solid rgba(255, 215, 0, 0.18);
+            border-radius: 2rem;
+            box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35);
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .login-card .service-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 215, 0, 0.18);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-white);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            padding: 0.95rem 1.25rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            color: #111;
+            background: #fff;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .btn-social:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(255, 215, 0, 0.18);
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-grey);
+            margin: 2rem 0;
+        }
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+        .form-control,
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 215, 0, 0.18);
+            color: #fff;
+            box-shadow: none;
+        }
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.55);
+        }
+        .form-label {
+            color: var(--text-grey);
+        }
+        .login-footer {
+            color: var(--text-grey);
+            font-size: 0.92rem;
+        }
+        .login-footer a {
+            color: var(--primary-yellow);
+            text-decoration: none;
+        }
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+        .login-panel-title {
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 991.98px) {
+            .login-hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            .login-side {
+                padding: 2.5rem 1.5rem;
+            }
+            .login-card {
+                padding: 2rem 1.5rem;
+                border-radius: 1.5rem;
+            }
+        }
+        @media (max-width: 767.98px) {
+            .login-side {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">TECH <span class="text-warning">HOUSE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#refacciones">Refacciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#forward">Forward</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="login-hero">
+        <div class="login-side">
+            <div class="login-side-content text-center text-lg-start">
+                <p class="service-chip mb-3">Bienvenido</p>
+                <h2>Inicia sesión y recupera el control de tu equipo.</h2>
+                <p class="mt-4">Accede a tu perfil, revisa tus reparaciones y recibe soporte premium. Ideal para quien necesita rapidez y confianza en cada servicio.</p>
+            </div>
+        </div>
+        <div class="login-card">
+            <div class="login-panel-title text-center mb-4">
+                <p class="service-chip mb-3">Regístrate</p>
+                <h1 class="display-6 fw-bold text-warning mb-2">Crea tu cuenta</h1>
+                <p class="text-grey mb-0">¿Ya tienes un perfil personal? <a href="#" class="fw-semibold">Iniciar sesión</a></p>
+            </div>
+            <div class="d-grid gap-3">
+                <button type="button" class="btn-social"><i class="bi bi-google"></i> Registrarse con Google</button>
+                <button type="button" class="btn-social"><i class="bi bi-facebook"></i> Registrarse con Facebook</button>
+            </div>
+            <div class="divider">o</div>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" placeholder="Tu nombre completo">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" placeholder="tu@correo.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" placeholder="*******">
+                </div>
+                <button type="submit" class="btn btn-warning w-100 fw-bold">Registrarse con un email</button>
+            </form>
+            <p class="login-footer mt-4 mb-0">Tu perfil se configurará como público automáticamente cuando te registres. Puedes cambiarlo más tarde en la configuración de tu perfil.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

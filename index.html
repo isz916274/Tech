@@ -27,12 +27,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/services.html">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#refacciones">Refacciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#forward">Forward</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/login.html"><i class="bi bi-person-fill"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -40,12 +40,12 @@
 
   <header class="py-5 text-warning header-hero"> 
     <div class="container">
-        <div class="row align-items-center text-center text-lg-start">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <h1 class="display-3 fw-bold mb-3 text-warning">REPARACIÓN</h1>
-                <h2 class="display-5 fw-normal mb-3 text-white">PROFESIONAL</h2>
-                <p class="h4 fw-light mb-4 text-warning"> Confía en nuestros expertos para devolverle la vida a tus dispositivos.</p>
-                <div class="row mt-5 justify-content-center justify-content-lg-start">
+        <div class="row align-items-center text-center">
+            <div class="col-12">
+                <h1 class="display-3 fw-bold mb-3 text-warning animate-slide-in">REPARACIÓN</h1>
+                <h2 class="display-5 fw-normal mb-3 text-white animate-slide-in-delay">PROFESIONAL</h2>
+                <p class="h4 fw-light mb-4 text-warning animate-slide-in-delay-2"> Confía en nuestros expertos para devolverle la vida a tus dispositivos.</p>
+                <div class="row mt-5 justify-content-center">
                     <div class="col-auto">
                         <a href="#contacto" class="btn btn-warning btn-lg px-4 fs-5 w-100 fw-bold">Cotizar</a>
                     </div>
@@ -58,33 +58,66 @@
     </div>
 </header>
 
-    <section id="servicios" class="container py-5">
-        <h2 class="text-center mb-5 fw-bold">NUESTROS SERVICIOS</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 hover-card border-0 shadow-sm">
-                    <img src="img/reparacion.jpg" class="card-img-top" alt="Reparación Celulares">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold">Reparación de Celulares</h5>
-                        <p class="small text-secondary">Cambio de pantalla, baterías y fallas de software.</p>
-                    </div>
+    <section id="servicios" class="py-5 position-relative overflow-hidden">
+        <div class="services-deco services-deco-1"></div>
+        <div class="services-deco services-deco-2"></div>
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-7">
+                    <p class="text-warning text-uppercase fw-bold mb-2 small letter-spacing">Servicios Premium</p>
+                    <h2 class="display-6 fw-bold text-white">Soluciones rápidas para Smartphone, Tableta y Laptop</h2>
+                    <p class="text-grey lead mb-4">Atención técnica especializada con garantía, mantenimiento exprés y precios claros. Ideal para usuarios que buscan servicio confiable sin sorpresas.</p>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <a href="#contacto" class="btn btn-outline-warning btn-lg px-4 fw-bold">Agendar en WhatsApp <i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 hover-card border-0 shadow-sm">
-                    <img src="img/reparacion2.jpg" class="card-img-top" alt="Reparación Laptops">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold">Computadoras y Laptops</h5>
-                        <p class="small text-secondary">Mantenimiento preventivo, aumento de RAM y formateo.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card service-card h-100">
+                        <div class="service-card-image">
+                            <img src="img/reparacion.jpg" alt="Revisión Smartphone" class="img-fluid">
+                        </div>
+                        <div class="card-body text-center">
+                            <span class="service-chip mb-3">Smartphone</span>
+                            <h3 class="h5 fw-bold mb-2">Revisión Smartphone</h3>
+                            <p class="text-secondary mb-4">Reparación rápida y garantizada para tu teléfono.</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <span class="service-meta"><i class="bi bi-phone"></i></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 hover-card border-0 shadow-sm">
-                    <img src="img/reparacion3.webp" height="280px" class="card-img-top" alt="Smartwatches">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold">Relojes Inteligentes</h5>
-                        <p class="small text-secondary">Reparación de sensores, correas y carga.</p>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card service-card h-100">
+                        <div class="service-card-image">
+                            <img src="img/reparacion2.jpg" alt="Revisión Tableta" class="img-fluid">
+                        </div>
+                        <div class="card-body text-center">
+                            <span class="service-chip mb-3">Tableta</span>
+                            <h3 class="h5 fw-bold mb-2">Revisión Tableta</h3>
+                            <p class="text-secondary mb-4">Tu tablet como nueva, sin perder la información.</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <span class="service-meta"><i class="bi bi-tablet"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card service-card h-100">
+                        <div class="service-card-image">
+                            <img src="img/reparacion3.webp" alt="Revisión Laptop" class="img-fluid">
+                        </div>
+                        <div class="card-body text-center">
+                            <span class="service-chip mb-3">Laptop</span>
+                            <h3 class="h5 fw-bold mb-2">Revisión Laptop</h3>
+                            <p class="text-secondary mb-4">Soluciones para todos los modelos y marcas.</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                             <span class="service-meta"><i class="bi bi-laptop"></i></span>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -390,6 +423,9 @@
                     <h5 class="text-warning">SÍGUENOS</h5>
                     <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-3"></i></a>
                     <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-3"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-3"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin fs-3"></i></a>
+
                 </div>
             </div>
             <div class="text-center small mt-4 border-top border-secondary pt-3">© 2026 Tech House. Todos los derechos reservados.</div>
