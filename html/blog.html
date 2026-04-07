@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techhouse - Blog de Tecnología</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos del sitio -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/blogStyles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-warning">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">TECH <span class="text-warning">HOUSE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/services.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/login.html"><i class="bi bi-person-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER HERO -->
+    <header class="py-5 text-warning header-hero">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-12">
+                    <h1 class="display-3 fw-bold mb-3 text-warning animate-slide-in">BLOG</h1>
+                    <h2 class="display-5 fw-normal mb-3 text-white animate-slide-in-delay">TECHHOUSE</h2>
+                    <p class="h4 fw-light mb-4 text-warning animate-slide-in-delay-2">Descubre artículos sobre reparación, tecnología y soluciones digitales.</p>
+                    <div class="row mt-5 justify-content-center">
+                        <div class="col-auto">
+                            <a href="#blog" class="btn btn-warning btn-lg px-4 fs-5 w-100 fw-bold">Ver posts</a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="#" class="btn btn-success btn-lg px-4 fs-5 w-100"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN ALL POSTS (BLOG) -->
+    <section id="blog" class="py-5">
+        <div class="container">
+            <!-- Título de sección -->
+            <div class="text-center mb-5">
+                <p class="text-warning text-uppercase fw-bold mb-2 small letter-spacing">Últimos Artículos</p>
+                <h2 class="display-6 fw-bold text-white">Todos nuestros posts</h2>
+                <p class="text-grey lead mt-3">Descubre los últimos artículos sobre tecnología, reparaciones y soluciones digitales</p>
+            </div>
+
+            <!-- Grid de posts (cards) -->
+            <div class="row g-4">
+                <!-- POST 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card post-card h-100">
+                        <!-- Imagen de portada -->
+                        <div class="post-image">
+                            <img src="https://via.placeholder.com/400x200?text=Tabletas" class="img-fluid" alt="Tabletas">
+                            <span class="badge-post">Dispositivos</span>
+                            <button class="heart-btn" onclick="toggleHeart(this)">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-3">Soluciones rápidas para tabletas: Confía en Techhouse</h5>
+                            <p class="text-grey small mb-4">Las tabletas se han convertido en una herramienta esencial en nuestra vida diaria. Desde el trabajo hasta el entretenimiento, estos dispositivos son versátiles y prácticos...</p>
+
+                            <!-- Metadatos -->
+                            <div class="post-meta">
+                                <div class="mb-2">
+                                    <small class="text-grey"><i class="bi bi-person-circle me-2 text-warning"></i>Cristian Hernández</small>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <small class="text-grey"><i class="bi bi-calendar-event me-1 text-warning"></i>17 oct 2025</small>
+                                    <small class="text-grey"><i class="bi bi-clock me-1 text-warning"></i>4 min</small>
+                                </div>
+                                <small class="text-grey"><i class="bi bi-eye me-1 text-warning"></i>19 visualizaciones</small>
+                            </div>
+                        </div>
+
+                        <!-- Botón -->
+                        <div class="card-footer border-top-0 bg-transparent">
+                            <button class="btn btn-warning btn-sm w-100 fw-bold" onclick="openPost(1)">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POST 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card post-card h-100">
+                        <!-- Imagen de portada -->
+                        <div class="post-image">
+                            <img src="https://via.placeholder.com/400x200?text=Laptops" class="img-fluid" alt="Laptops">
+                            <span class="badge-post">Reparación</span>
+                            <button class="heart-btn" onclick="toggleHeart(this)">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-3">Reparación de laptops: Eficiencia y calidad en Techhouse</h5>
+                            <p class="text-grey small mb-4">La reparación de laptops es un tema que preocupa a muchos usuarios. Cuando un dispositivo falla, puede causar frustración...</p>
+
+                            <!-- Metadatos -->
+                            <div class="post-meta">
+                                <div class="mb-2">
+                                    <small class="text-grey"><i class="bi bi-person-circle me-2 text-warning"></i>Cristian Hernández</small>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <small class="text-grey"><i class="bi bi-calendar-event me-1 text-warning"></i>17 oct 2025</small>
+                                    <small class="text-grey"><i class="bi bi-clock me-1 text-warning"></i>4 min</small>
+                                </div>
+                                <small class="text-grey"><i class="bi bi-eye me-1 text-warning"></i>16 visualizaciones</small>
+                            </div>
+                        </div>
+
+                        <!-- Botón -->
+                        <div class="card-footer border-top-0 bg-transparent">
+                            <button class="btn btn-warning btn-sm w-100 fw-bold" onclick="openPost(2)">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POST 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card post-card h-100">
+                        <!-- Imagen de portada -->
+                        <div class="post-image">
+                            <img src="https://via.placeholder.com/400x200?text=Smartphones" class="img-fluid" alt="Smartphones">
+                            <span class="badge-post">Smartphones</span>
+                            <button class="heart-btn" onclick="toggleHeart(this)">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-3">Reparaciones de smartphones: ¡Servicio garantizado en Techhouse!</h5>
+                            <p class="text-grey small mb-4">La tecnología avanza a pasos agigantados, y nuestros smartphones se han convertido en herramientas esenciales...</p>
+
+                            <!-- Metadatos -->
+                            <div class="post-meta">
+                                <div class="mb-2">
+                                    <small class="text-grey"><i class="bi bi-person-circle me-2 text-warning"></i>Cristian Hernández</small>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <small class="text-grey"><i class="bi bi-calendar-event me-1 text-warning"></i>17 oct 2025</small>
+                                    <small class="text-grey"><i class="bi bi-clock me-1 text-warning"></i>4 min</small>
+                                </div>
+                                <small class="text-grey"><i class="bi bi-eye me-1 text-warning"></i>14 visualizaciones</small>
+                            </div>
+                        </div>
+
+                        <!-- Botón -->
+                        <div class="card-footer border-top-0 bg-transparent">
+                            <button class="btn btn-warning btn-sm w-100 fw-bold" onclick="openPost(3)">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL VISTA EXPANDIDA DEL POST -->
+    <div id="postDetail" class="post-detail-modal hidden">
+        <div class="post-detail-container">
+            <button class="close-post" onclick="closePost()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row g-4 align-items-start">
+                <!-- Carrusel de imágenes a la izquierda -->
+                <div class="col-lg-5">
+                    <div id="carouselPost" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-lg overflow-hidden">
+                            <div class="carousel-item active">
+                                <img id="carousel-img-1" src="" class="d-block w-100" alt="Imagen post">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="carousel-img-2" src="" class="d-block w-100" alt="Imagen post">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="carousel-img-3" src="" class="d-block w-100" alt="Imagen post">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPost" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPost" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Contenido del post a la derecha -->
+                <div class="col-lg-7">
+                    <div class="post-detail-content">
+                        <span id="post-badge" class="badge bg-warning text-dark mb-3"></span>
+                        <h1 id="post-title" class="display-6 fw-bold text-white mb-4"></h1>
+
+                        <!-- Metadatos extendidos -->
+                        <div class="post-detail-meta mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/50x50?text=Avatar" alt="Avatar" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <p class="text-white fw-bold mb-0" id="post-author"></p>
+                                    <small class="text-grey" id="post-date"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4 text-grey small">
+                                <span><i class="bi bi-clock me-1 text-warning"></i><span id="post-time"></span> min</span>
+                                <span><i class="bi bi-eye me-1 text-warning"></i><span id="post-views"></span> vistas</span>
+                                <span><i class="bi bi-heart me-1 text-warning"></i><span id="post-likes">0</span> likes</span>
+                            </div>
+                        </div>
+
+                        <!-- Contenido del post -->
+                        <div class="post-detail-body">
+                            <p id="post-excerpt" class="text-grey lead"></p>
+                            <p id="post-content" class="text-grey lh-lg"></p>
+                            
+                            <!-- Secciones adicionales -->
+                            <h3 class="text-white fw-bold mt-5 mb-3" id="section-title"></h3>
+                            <p id="post-section-content" class="text-grey"></p>
+
+                            <h3 class="text-white fw-bold mt-5 mb-3">¿Por qué elegir Techhouse?</h3>
+                            <ul class="text-grey">
+                                <li class="mb-2">✓ Técnicos certificados y con experiencia</li>
+                                <li class="mb-2">✓ Garantía de 30 días en todas las reparaciones</li>
+                                <li class="mb-2">✓ Presupuestos claros sin sorpresas</li>
+                                <li class="mb-2">✓ Atención rápida y eficiente</li>
+                            </ul>
+                        </div>
+
+                        <!-- Botón de acción -->
+                        <div class="mt-5">
+                            <a href="#" class="btn btn-warning btn-lg fw-bold">
+                                <i class="bi bi-whatsapp me-2"></i>Contactar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Posts relacionados al final -->
+            <div class="mt-5 pt-5 border-top border-secondary">
+                <h3 class="text-white fw-bold mb-4">Otros artículos interesantes</h3>
+                <div id="related-posts" class="row g-4">
+                    <!-- Se llena con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark border-top border-warning py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-warning">
+                        <i class="bi bi-cpu me-2"></i>TECHHOUSE
+                    </h5>
+                    <p class="text-grey small">Soluciones tecnológicas rápidas y confiables para todos tus dispositivos. Somos tu aliado en reparaciones y mantenimiento profesional.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Enlaces rápidos</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="../index.html" class="text-grey text-decoration-none footer-link">Inicio</a></li>
+                        <li class="mb-2"><a href="../html/services.html" class="text-grey text-decoration-none footer-link">Servicios</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-grey text-decoration-none footer-link">Blog</a></li>
+                        <li class="mb-2"><a href="../html/faq.html" class="text-grey text-decoration-none footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Síguenos</h5>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-warning btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-warning btn-sm rounded-circle"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-warning btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-warning btn-sm rounded-circle"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-warning opacity-25">
+
+            <div class="text-center">
+                <p class="text-grey small mb-0">&copy; 2025 TECHHOUSE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Datos de los posts
+        const posts = {
+            1: {
+                title: "Soluciones rápidas para tabletas: Confía en Techhouse",
+                category: "Dispositivos",
+                author: "Cristian Hernández",
+                date: "17 oct 2025",
+                time: 4,
+                views: 19,
+                excerpt: "Las tabletas se han convertido en una herramienta esencial en nuestra vida diaria. Desde el trabajo hasta el entretenimiento, estos dispositivos son versátiles y prácticos.",
+                content: `Las tabletas modernas ofrecen múltiples aplicaciones y funcionalidades que las hacen indispensables. Sin embargo, como cualquier dispositivo electrónico, pueden presentar problemas técnicos que afecten su desempeño.
+
+                En Techhouse contamos con especialistas capacitados en reparación de tabletas de todas las marcas. Desde problemas de pantalla hasta fallas de batería, nosotros nos encargamos de diagnosticar y reparar tu dispositivo de manera profesional.
+
+                Nuestro servicio incluye diagnóstico gratuito, presupuesto detallado y garantía en cada reparación. No esperes más, contacta con nosotros hoy mismo y recupera la funcionalidad completa de tu tableta.`,
+                images: [
+                    "https://via.placeholder.com/600x400?text=Reparación+Tableta+1",
+                    "https://via.placeholder.com/600x400?text=Reparación+Tableta+2",
+                    "https://via.placeholder.com/600x400?text=Reparación+Tableta+3"
+                ],
+                sectionTitle: "Problemas comunes en tabletas",
+                sectionContent: "Pantalla rota o con líneas, batería que no carga, problemas de conectividad, sistemas operativos lento, cámara defectuosa. Estos son algunos de los problemas más frecuentes que atendemos en nuestro taller. Contamos con las herramientas y repuestos necesarios para resolver cualquier inconveniente."
+            },
+            2: {
+                title: "Reparación de laptops: Eficiencia y calidad en Techhouse",
+                category: "Reparación",
+                author: "Cristian Hernández",
+                date: "17 oct 2025",
+                time: 4,
+                views: 16,
+                excerpt: "La reparación de laptops es un tema que preocupa a muchos usuarios. Cuando un dispositivo falla, puede causar frustración y pérdida de productividad.",
+                content: `Las laptops son herramientas esenciales para el trabajo y estudios. Un mal funcionamiento puede afectar significativamente tu productividad. En Techhouse entendemos la importancia de tu laptop y nos comprometemos a devolverla en perfectas condiciones.
+
+                Realizamos reparaciones desde cambio de pantalla, reemplazo de batería, limpieza de ventiladores, hasta problemas más complejos de motherboard. Todos nuestros servicios incluyen diagnóstico sin costo y garantía de 30 días.
+
+                Nuestro equipo de técnicos tiene años de experiencia en reparación de todas las marcas principales como Dell, HP, Lenovo, ASUS, MacBook y más. Confía en nosotros para que tu laptop vuelva a funcionar como nueva.`,
+                images: [
+                    "https://via.placeholder.com/600x400?text=Reparación+Laptop+1",
+                    "https://via.placeholder.com/600x400?text=Reparación+Laptop+2",
+                    "https://via.placeholder.com/600x400?text=Reparación+Laptop+3"
+                ],
+                sectionTitle: "Servicios de reparación de laptop",
+                sectionContent: "Reemplazo de pantalla LCD/OLED, sustitución de batería, limpieza de polvo y reemplazo de pasta térmica, reparación de puerto de carga, reemplazo de teclado, recuperación de datos, instalación de sistemas operativos. Ofrecemos todas las soluciones que tu laptop necesita."
+            },
+            3: {
+                title: "Reparaciones de smartphones: ¡Servicio garantizado en Techhouse!",
+                category: "Smartphones",
+                author: "Cristian Hernández",
+                date: "17 oct 2025",
+                time: 4,
+                views: 14,
+                excerpt: "La tecnología avanza a pasos agigantados, y nuestros smartphones se han convertido en herramientas esenciales de nuestro día a día.",
+                content: `Los smartphones son nuestros compañeros constantemente. Pantallas rotas, baterías que no cargan, botones que no funcionan... los problemas son más comunes de lo que crees. En Techhouse tenemos la solución para todos tus problemas de celular.
+
+                Ofrecemos reparación de pantalla, cambio de batería, reparación de puerto de carga, cambio de cámara, y mucho más. Con técnicos especializados y piezas originales de calidad, garantizamos que tu teléfono quedará como nuevo.
+
+                No solo reparamos, también ofrecemos mantenimiento preventivo para prolongar la vida útil de tu dispositivo. Visítanos hoy y descubre por qué somos la opción confiable en reparación de smartphones del área.`,
+                images: [
+                    "https://via.placeholder.com/600x400?text=Reparación+Smartphone+1",
+                    "https://via.placeholder.com/600x400?text=Reparación+Smartphone+2",
+                    "https://via.placeholder.com/600x400?text=Reparación+Smartphone+3"
+                ],
+                sectionTitle: "Reparaciones más solicitadas",
+                sectionContent: "Reemplazo de pantalla, cambio de batería, reparación de puerto USB-C o lightning, cambio de cámara frontal/trasera, reparación de micrófono, cambio de altavoz, limpieza interna. Todo con garantía y usando repuestos de calidad certificada."
+            }
+        };
+
+        // Función para abrir el post expandido
+        function openPost(postId) {
+            const post = posts[postId];
+            const modal = document.getElementById('postDetail');
+            
+            // Cargar datos del post
+            document.getElementById('post-badge').textContent = post.category;
+            document.getElementById('post-title').textContent = post.title;
+            document.getElementById('post-author').textContent = post.author;
+            document.getElementById('post-date').textContent = post.date;
+            document.getElementById('post-time').textContent = post.time;
+            document.getElementById('post-views').textContent = post.views;
+            document.getElementById('post-excerpt').textContent = post.excerpt;
+            document.getElementById('post-content').textContent = post.content;
+            document.getElementById('section-title').textContent = post.sectionTitle;
+            document.getElementById('post-section-content').textContent = post.sectionContent;
+            
+            // Cargar imágenes en el carrusel
+            document.getElementById('carousel-img-1').src = post.images[0];
+            document.getElementById('carousel-img-2').src = post.images[1];
+            document.getElementById('carousel-img-3').src = post.images[2];
+
+            // Cargar posts relacionados
+            loadRelatedPosts(postId);
+
+            // Mostrar modal con scroll suave
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Función para cerrar el post expandido
+        function closePost() {
+            const modal = document.getElementById('postDetail');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Función para cargar posts relacionados
+        function loadRelatedPosts(currentPostId) {
+            const relatedContainer = document.getElementById('related-posts');
+            relatedContainer.innerHTML = '';
+
+            // Mostrar los otros posts (máximo 2)
+            let count = 0;
+            for (let postId in posts) {
+                if (parseInt(postId) !== currentPostId && count < 2) {
+                    const post = posts[postId];
+                    const html = `
+                        <div class="col-lg-6">
+                            <div class="card post-card-small">
+                                <img src="${post.images[0]}" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-white">${post.title}</h5>
+                                    <p class="text-grey small mb-3">${post.excerpt.substring(0, 100)}...</p>
+                                    <button class="btn btn-warning btn-sm fw-bold" onclick="openPost(${postId})">
+                                        Leer ahora
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    relatedContainer.innerHTML += html;
+                    count++;
+                }
+            }
+        }
+
+        // Función para el botón de corazón
+        function toggleHeart(button) {
+            button.classList.toggle('liked');
+            const icon = button.querySelector('i');
+            
+            if (button.classList.contains('liked')) {
+                icon.classList.remove('bi-heart');
+                icon.classList.add('bi-heart-fill');
+            } else {
+                icon.classList.remove('bi-heart-fill');
+                icon.classList.add('bi-heart');
+            }
+        }
+
+        // Cerrar modal al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('postDetail');
+            const container = document.querySelector('.post-detail-container');
+            
+            if (modal && !modal.classList.contains('hidden') && event.target === modal) {
+                closePost();
+            }
+        });
+
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePost();
+            }
+        });
+    </script>
+</body>
+</html>
